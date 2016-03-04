@@ -8,7 +8,7 @@ MAINTAINER david.harris@bramhalldata.com
 COPY * /tmp/
 
 RUN echo root:pivotal | chpasswd \
-	&& yum install -y unzip which more ed wget; yum clean all \
+	&& yum install -y unzip which more ed wget openssh-clients ntp; yum clean all \
 	&& wget http://bit.ly/1WSiZIm -P /tmp/ \
 	&& unzip /tmp/1WSiZIm -d /tmp/ \
 	&& rm /tmp/1WSiZIm \
